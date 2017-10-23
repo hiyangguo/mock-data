@@ -1,0 +1,21 @@
+{
+  "name": "mock-data",
+  "version": "1.0.0",
+  "description": "快速生成 mock 数据",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js ",
+    "test word": "node index.js text 1 2"
+  },
+  "author": [
+    {
+      "name": "Godfery",
+      "email": "hiyangguo@qq.com"
+    }
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "alfy": "^0.6.0",
+    "mockjs": "^1.0.1-beta3"
+  }
+}
