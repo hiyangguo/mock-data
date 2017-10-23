@@ -21,7 +21,7 @@
 | url |  URL | -- |
 | phone | 电话号码 | -- |
 | domain | 域名 | -- |
-| ip |  Ip |-- ]|
+| ip | Ip |-- |
 | date |  日期 | `format` = `'yyyy-MM-dd'` |
 | time | 时间 | `format`= `'HH:mm:ss'`|
 | datetime | 日期时间 | `format`= `'yyyy-MM-dd HH:mm:ss'`|
