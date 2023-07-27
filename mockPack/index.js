@@ -20,7 +20,7 @@ const mockPack = {
         return genResult('邮箱', mockJs.mock('@email'));
     },
     url() {
-        return genResult('URL', mockJs.mock('@url').replace(/^.*\:\/\//, 'http://'));
+        return genResult('URL', mockJs.mock('@url'));
     },
     phone() {
         return genResult('中国大陆电话', mockJs.mock(/^((\d{3}-\d{7,8}((-\d{1,4})?))|(\d{4}-\d{7,8}((-\d{1,4})?))|(\d{11,12}))$/));
@@ -55,22 +55,31 @@ const mockPack = {
         return genResult('区县', mockJs.mock('@county'));
     },
     guid() {
-        return genResult('Guid', mockJs.mock('@guid'));
+        return genResult('Guid', mockJs.mock('@guid').toLowerCase());
+    },
+    uuid: () => {
+        return genResult('uuid', mockJs.mock('@guid').toLowerCase());
+    },
+    paragraph(min = 1, max = 5) {
+        return genResult('英文段落', mockJs.mock(`@paragraph(${min},${max > min ? max : min})`));
     },
     sentence(min = 1) {
         return genResult('英文句子', mockJs.mock(`@sentence(${min})`));
     },
-    word(min = 7) {
+    word(min = 1) {
         return genResult('英文单词', mockJs.mock(`@word(${min})`));
     },
     title(min = 2, max = 5) {
         return genResult('英文标题', mockJs.mock(`@title(${min},${max > min ? max : min})`));
     },
-    csentence(min = 20) {
+    cparagraph(min = 1) {
+        return genResult('中文段落', mockJs.mock(`@csentence(${min})`));
+    },
+    csentence(min = 1) {
         return genResult('中文句子', mockJs.mock(`@csentence(${min})`));
     },
-    cword(min = 3, max = 5) {
-        return genResult('中文单词', mockJs.mock(`@cword(${min},${max > min ? max : min})`));
+    cword(min = 1) {
+        return genResult('中文单词', mockJs.mock(`@cword(${min})`));
     },
     ctitle(min = 5, max = 10) {
         return genResult('中文标题', mockJs.mock(`@ctitle(${min},${max > min ? max : min})`));
