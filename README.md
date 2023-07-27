@@ -30,6 +30,7 @@
 | city | 城市 | -- |
 | county | 区县 | -- |
 | guid |  guid | -- |
+| uuid |  uuid | -- |
 | paragraph | 英文段落 | `min` = `1`, `max` = `5` |
 | sentence | 英文句子 | `min` = `1` |
 | word | 英文单词 | `min` = `1` |
